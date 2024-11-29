@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Dashboard</h1>
+<ul>
+    {% for item in menu_items %}
+    <li>{{ item.name }} - ${{ item.price }}</li>
+    {% endfor %}
+</ul>
+<a href="/logout" class="btn btn-secondary">Logout</a>
+{% endblock %}

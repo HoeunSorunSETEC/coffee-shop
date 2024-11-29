@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}Create New User{% endblock %}
+
+{% block content %}
+<h1 class="text-center mb-4">Create New User</h1>
+<form method="POST" class="card p-4 shadow-sm">
+    {% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+    {% endif %}
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" id="username" name="username" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" name="password" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label for="role" class="form-label">Role</label>
+        <select id="role" name="role" class="form-select">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Create User</button>
+</form>
+{% endblock %}
