@@ -39,9 +39,19 @@ def logout():
 def dashboard():
     if 'user_id' not in session:
         return redirect(url_for('main.login'))
-    menu_items = MenuItem.query.all()
-    return render_template('dashboard.html', menu_items=menu_items)
 
+    # Query all menu items from the database
+    menu_items = MenuItem.query.all()
+
+    # Group items by category
+    menu = {}
+    for item in menu_items:
+        category = item.category  # Assume `category` is a field in your MenuItem model
+        if category not in menu:
+            menu[category] = []
+        menu[category].append(item)
+
+    return render_template('dashboard.html', menu=menu)
 
 @main_blueprint.route('/menu')
 def menu():

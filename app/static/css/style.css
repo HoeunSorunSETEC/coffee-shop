@@ -1,0 +1,165 @@
+/* General Styling */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebar {
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+}
+
+.sidebar h4 {
+    font-weight: bold;
+    color: #333;
+}
+
+.sidebar .nav-link {
+    font-size: 16px;
+    padding: 10px 15px;
+    color: #555;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+/* Category Buttons */
+button.btn-outline-secondary {
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    color: #333;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    transition: all 0.3s;
+}
+
+button.btn-outline-secondary:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+/* Product Grid */
+.card {
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.card p {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Order Summary */
+aside {
+    border-left: 1px solid #ddd;
+    background-color: #fff;
+    padding: 20px;
+}
+
+aside h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.list-group-item {
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+.list-group-item .text-muted {
+    font-size: 12px;
+}
+
+input#discount {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Totals Section */
+.list-group .fw-bold {
+    font-size: 16px;
+    color: #333;
+}
+
+.list-group-item:last-child {
+    font-size: 18px;
+    color: #28a745;
+}
+
+/* Buttons */
+.btn-secondary,
+.btn-success {
+    width: 48%;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    color: #fff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .col-md-7,
+    .col-md-3 {
+        width: 100%;
+    }
+
+    aside {
+        border-left: none;
+        border-top: 1px solid #ddd;
+    }
+}
